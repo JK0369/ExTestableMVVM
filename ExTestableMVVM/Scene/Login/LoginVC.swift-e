@@ -1,0 +1,41 @@
+//
+//  LoginVC.swift
+//  ExTestableMVVM
+//
+//  Created by 김종권 on 2021/11/25.
+//
+
+import UIKit
+import RxSwift
+import RxCocoa
+
+final class LoginVC: BaseViewController, ViewControllerInit {
+    
+    var viewModel: LoginVM!
+    var router: LoginRouter!
+    
+    override func configure() {
+        super.configure()
+        router = LoginRouter(viewController: self)
+    }
+    
+    func setupViews() {
+        
+    }
+    
+    func addSubviews() {
+        
+    }
+    
+    func makeConstraints() {
+        
+    }
+    
+    func bindInputs() {
+        
+    }
+    
+    func bindOutputs() {
+        
+    }
+}

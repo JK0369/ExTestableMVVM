@@ -1,0 +1,48 @@
+//
+//  LoginVM.swift
+//  ExTestableMVVM
+//
+//  Created by 김종권 on 2021/11/25.
+//
+
+import Foundation
+import RxSwift
+import RxCocoa
+
+protocol LoginVMInput {
+    
+}
+
+protocol LoginVMOutput {
+    
+}
+
+struct LoginDependency {
+    
+}
+
+protocol LoginVM: LoginVMInput, LoginVMOutput {
+    var dependency: LoginDependency { get }
+    init(dependency: LoginDependency)
+}
+
+final class LoginVMImpl: LoginVM {
+    
+    let dependency: LoginDependency
+    
+    init(dependency: LoginDependency) {
+        self.dependency = dependency
+    }
+    
+    // MARK: - Input
+    
+    
+    
+    // MARK: - Output
+    
+    
+    
+    // MARK: - Private
+    
+    
+}
