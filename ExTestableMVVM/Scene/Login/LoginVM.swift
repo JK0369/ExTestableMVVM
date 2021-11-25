@@ -28,15 +28,22 @@ protocol LoginVM: LoginVMInput, LoginVMOutput {
 final class LoginVMImpl: LoginVM {
     
     let dependency: LoginDependency
+    var state = State.nonLogin
     
     init(dependency: LoginDependency) {
         self.dependency = dependency
+    }
+    
+    enum State {
+        case login
+        case nonLogin
     }
     
     // MARK: - Input
     
     func didTapLoginButton() {
         print("로그인 완료 !!!")
+        state = .login
         finishLogin.accept(())
     }
     
